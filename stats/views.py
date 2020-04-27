@@ -1,6 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+#from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse("Home page")
-# Create your views here.
+def stats_index(request):
+    return render(request, 'stats/stats_index.html')
+
+def stats_course(request):
+	return render(request, 'stats/stats_course.html')
+
+
+def stats_skill(request):
+	return render(request, 'stats/stats_skill.html')
+
+
+def stats_skill_overall(request):
+	return render(request, 'stats/stats_skill_overall.html')
+
+
+def stats_skill_challenge(request):
+	return render(request, 'stats/stats_skill_challenge.html')
+
+
