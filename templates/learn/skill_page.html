@@ -1,0 +1,8 @@
+{% extends 'studiocricket/base.html' %}
+{% block body %}
+<h1>Skill page</h1>
+{% for video in videos %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/N74cnBa_Bmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endfor %}
+
+{% endblock %}

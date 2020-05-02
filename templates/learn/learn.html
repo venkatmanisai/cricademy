@@ -1,4 +1,8 @@
 {% extends 'studiocricket/base.html' %}
 {% block body %}
 <h1>Learn page</h1>
+{% for course in courses %}
+	<h3><a href='{% url 'learn:course_page' course.id %}'>{{ course.course_name }}</a></h3>
+{% endfor %}
+
 {% endblock %}

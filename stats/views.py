@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from learn.models import Course
 #from django.http import HttpResponse
 
 def stats_index(request):
-    return render(request, 'stats/stats_index.html')
+	courses = Course.objects.all()
+	return render(request, 'stats/stats_index.html', {'courses': courses})
 
 def stats_course(request):
 	return render(request, 'stats/stats_course.html')
