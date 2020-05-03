@@ -3,6 +3,6 @@
 <h1>Stats Index Page</h1>
 <p>Here you will see a list of courses to choose for stats of that particular course</p>
 {% for course in courses %}
-	<h2>{{ course.course_name }}</h2>
+	<h3><a href='{% url 'stats:stats_course' course.id %}'>{{ course.course_name }}</a></h3>
 {% endfor %}
 {% endblock %}

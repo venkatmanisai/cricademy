@@ -2,4 +2,7 @@
 {% block body %}
 <h1>Stats Course Page</h1>
 <p>Here you will see a list of skills categorized into skill sets to choose for stats of that particular skill</p>
+{% for skill in skills %}
+<h3><a href='{% url 'stats:stats_skill' skill.course.id skill.id %}'>{{skill.skill_name}}</a></h3>
+{% endfor %}
 {% endblock %}
