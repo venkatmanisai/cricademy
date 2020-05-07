@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from . models import Course, Skillcategory, Skill, Videocategory, Video, Challenge
 
 
-def index(request):
+def learn_index(request):
 	courses = Course.objects.all()
 	return render(request,'learn/learn.html', {'courses': courses})
 
