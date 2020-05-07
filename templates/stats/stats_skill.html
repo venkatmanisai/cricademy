@@ -1,5 +1,16 @@
 {% extends 'studiocricket/base.html' %}
 {% block body %}
 <h1>Stats skill Page</h1>
-<p>Here you will have to choose between overall stats of the skills or a list of challenges to choose to get stats of the particular challenge</p>
+<h2>Overall stats of the skill</h2>
+{% if no_data %}
+	<p>{{no_data}}</p>
+{% else %}
+	<h3>Foot work: {{footwork_stat}}</h3>
+	<h3>Bat middling: {{middle_stat}}</h3>
+	<h3>Bat swing: {{bat_position_stat}}</h3>
+	<h3>Head position: {{head_position_stat}}</h3>
+	<h3>Elbow position: {{elbow_position_stat}}</h3>
+	<h3>Shoulder line: {{shoulder_line_stat}}</h3>
+	<h3>Ball direction: {{ball_direction_stat}}</h3>
+{% endif %}
 {% endblock %}
